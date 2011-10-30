@@ -11,5 +11,6 @@ def configure(conf):
 
 def build(bld):
   obj = bld.new_task_gen("cxx", "shlib", "node_addon")
+  obj.cxxflags = ["-O3"]
   obj.target = "microtime"
   obj.source = "src/microtime.cc"
